@@ -3,12 +3,12 @@
  */
 var fibGenerator = function*() {
    let prev = 0, curr = 1;
+
     
     while (true) {
-        yield prev; 
-        let next = prev + curr;  
-        prev = curr;  
-        curr = next;  
+        yield prev;  
+        [prev,curr] =[curr, prev + curr]  
+         
     }
 };
 
